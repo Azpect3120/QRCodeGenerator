@@ -73,5 +73,8 @@ app.all("*", (req, res) => {
     res.status(404).send("Error 404: Resource Not Found");
 });
 
+// PORTING
+const PORT = process.env.PORT || 3000;
+
 // Open server
-app.listen(3000, () => console.log("Server listening on port 3000"));
+app.listen(PORT, () => console.log(`Server is live at port ${PORT}...`));
